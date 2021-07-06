@@ -1,0 +1,16 @@
+name: "Zigbee2mqtt Multi Addon Action"
+description: "Create and maintain multiple Zigbee2mqtt Home Assistant add-ons in your repository"
+author: "Andrey Polyak"
+branding:
+  icon: "radio"
+  color: "black"
+inputs:
+  addon_names:
+    description: "Zigbee2mqtt Home Assistant add-on names splitted with comma"
+    default: "addon 1, addon 2"
+  github_token:
+    description: "Github token"
+    default: "${{ github.token }}"
+runs:
+  using: "docker"
+  image: "Dockerfile"
